@@ -4,7 +4,8 @@ import senticnet
 import SenticParser
 import nltk
 import os
-java_path = "C:/Program Files/Java/jdk1.7.0_75/bin/java.exe" # replace this
+path=os.getenv("JAVA_HOME")
+java_path = path+"/bin/java.exe" # replace this
 os.environ['JAVAHOME'] = java_path
  
 G = nx.read_gpickle( "test.gpickle" )
