@@ -31,10 +31,10 @@ while True:
 
 f.close()
 
-zip_file = "stanford-postagger-2013-04-04.zip"
+zip_file = "stanford-postagger-2014-01-04.zip"
 
 
 with zipfile.ZipFile(zip_file, "r") as z:
     z.extractall( )
 
-shutil.move("stanford-postagger-2013-04-04", "stanford-postagger")
+shutil.move("stanford-postagger-2014-01-04", "stanford-postagger")
