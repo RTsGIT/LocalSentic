@@ -1,0 +1,28 @@
+Enter your search sentence ===>> list_concepts ['a good boy']
+[(u'is', u'VBZ'), (u'a', u'DT'), (u'good', u'JJ'), (u'boy', u'NN')]
+[(u'he', u'PRP')]
+['']
+[]
+['']
+parserList ['']
+step1 ['', 'a good boy']
+step2 ['a good boy']
+step3 set(['a good boy'])
+['a', 'boy', 'good']
+['a', 'boy', 'good']
+a
+---------------------------
+boy
+---------------------------
+{'polarity': 0.598, 'semantics': ['ball_boy', 'cub', 'altar_boy', 'bat_boy', 'lad', 'semantics'], 'sentics': {'sensitivity': 0.0, 'attention': 0.596, 'pleasantness': 0.575, 'aptitude': -0.622}}
+0.598
+['cub', 'altar_boy', 'ball_boy', 'lad', 'bat_boy', 'semantics']
+{'sensitivity': -0.622, 'attention': 0.575, 'pleasantness': 0.596, 'aptitude': 0.0}
+===================================================================================
+good
+---------------------------
+{'polarity': 0.883, 'semantics': ['semantics', 'niceness', 'like_candy', 'pleasant', 'uncommon', 'hard_find'], 'sentics': {'sensitivity': 0.98, 'attention': 0.75, 'pleasantness': 0.0, 'aptitude': 0.92}}
+0.883
+['semantics', 'hard_find', 'pleasant', 'niceness', 'like_candy', 'uncommon']
+{'sensitivity': 0.98, 'attention': 0.0, 'pleasantness': 0.75, 'aptitude': 0.92}
+===================================================================================
