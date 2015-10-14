@@ -128,12 +128,14 @@ def getOutputConcepts(sentence):
 
    Parse = SenticParser()
    TaggedSentence = Parse.TaggedSentence(sentence)
-
+   # print 'TaggedSentence: '
+   # print TaggedSentence
    ConceptChunks = []							
 
    # Chunking Phase
    test_sents = conll2000.chunked_sents('test.txt', chunk_types=['NP'])
    train_sents = conll2000.chunked_sents('train.txt', chunk_types=['NP'])
+
 
    # training the chunker
    NPChunker = ChunkParser(train_sents)
@@ -142,6 +144,8 @@ def getOutputConcepts(sentence):
    pb = ParseBigrams.Parser()
 
    ChunkedSentences = Parse.FindSplit(sentence, TaggedSentence)
+   # print 'ChunkedSentences: '
+   # print ChunkedSentences
 
    events = []
    objects = []
@@ -154,7 +158,8 @@ def getOutputConcepts(sentence):
    for sent in ChunkedSentences:
 
 	   TaggedChunk = Parse.TaggedSentence(sent)
-	   print TaggedChunk
+	   # print 'TaggedChunk: '
+	   # print TaggedChunk
 
 
 	   PartsSentence = [l for l in [list(group) for key, group in groupby(TaggedChunk, key=lambda k: k[1]=="IN")]
@@ -247,11 +252,11 @@ def getOutputConcepts(sentence):
    events = list(set(events))
    objects = list(set(objects))	
 
-   print events
-   print objects
+   # print events
+   # print objects
 
    outputList = list( set(events) | set(objects))
-   print outputList
+   # print outputList
 
    return outputList
 
